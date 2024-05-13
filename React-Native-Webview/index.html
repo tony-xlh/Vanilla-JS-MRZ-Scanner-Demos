@@ -92,6 +92,13 @@
           }
         });
         await enhancer.setUIElement(Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL);
+        enhancer.setScanRegion({
+          regionLeft:0,
+          regionTop:40,
+          regionRight:100,
+          regionBottom:60,
+          regionMeasuredByPercentage: 1
+        })
         let container = document.getElementsByClassName("scanner")[0];
         container.appendChild(enhancer.getUIElement());
         updateStyleForiOS();
